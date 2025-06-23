@@ -14,12 +14,22 @@ function alteraQtd(produto, acao) {
     } 
 }
 
-function soma() {
+function somaTotal(valores) {
     let soma = 0
 
-    for(let i = 1; i < 4; i++) {
-        soma += Number(document.getElementById('total-' + i).innerHTML)
+    for(let i = 0; i < valores.length; i++) {
+        soma += valores[i];
     }
 
-    document.getElementById('subtotal').innerHTML = soma
+    return soma;
+}
+
+function soma() {
+    let valores = [
+        Number(document.getElementById('total-1').innerHTML),
+        Number(document.getElementById('total-2').innerHTML),
+        Number(document.getElementById('total-3').innerHTML)
+    ]
+
+    document.getElementById('subtotal').innerHTML = somaTotal(valores)
 }
