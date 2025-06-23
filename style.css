@@ -22,3 +22,9 @@ footer {
 .destaque {
     color: #ff0000;
 }
+
+.desativar {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

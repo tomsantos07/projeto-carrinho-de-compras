@@ -4,8 +4,10 @@ function alteraQtd(produto, acao) {
     const total = document.getElementById('total-' + produto)
 
     if(acao == '-' && qtd.innerHTML == 0){
-        alert('A quantidade de produtos não pode ser inferior a 0.')
+        // alert('A quantidade de produtos não pode ser inferior a 0.')
+        qtd.classList.add('desativar') 
     } else {
+        qtd.classList.remove('desativar')
         acao == '+' ? qtd.innerHTML++ : qtd.innerHTML--
         total.innerHTML = qtd.innerHTML * valor.innerHTML
         soma()
