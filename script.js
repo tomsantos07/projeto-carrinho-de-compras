@@ -24,6 +24,10 @@ function somaTotal(valores) {
     return soma;
 }
 
+const expected = 10;
+const actual = somaTotal([1, 2, 3, 4]);
+console.assert(expected === actual, `Expected ${expected}, but got ${actual}`);
+
 function soma() {
     let valores = [
         Number(document.getElementById('total-1').innerHTML),
